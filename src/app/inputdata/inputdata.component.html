@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="email">FirstName</label>
+                    <input type="text" id="firstname" class="form-control" [(ngModel)]="firstname" name="firstname"
+                        placeholder="Coder" required />
+                </div>
+                <div class="col-md-6">
+                    <label for="secondname">SecondName</label>
+                    <input type="text" id="secondname" class="form-control" [(ngModel)]="secondname" name="secondname"
+                        placeholder="Byte" required />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 ">
+                <button class="btn btn-primary" type="button" (click)="changeLowCase()">Generate</button>  
+                <span *ngIf="isLoading" class="move-left">
+                    {{result}}
+                </span>
+            </div>
+
+        </div>
+    </div>
+</div>
